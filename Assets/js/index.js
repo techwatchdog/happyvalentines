@@ -20,6 +20,22 @@ let currentCardIndex = 0;
             document.querySelector('.book').classList.toggle('open');
         }
 
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            const nextPage = document.getElementById(pageId);
+            nextPage.classList.add('active');
+            
+            if(pageId === 'page4') {
+                setTimeout(() => {
+                    document.getElementById('flower').classList.add('show');
+                }, 500);
+            }
+        }
+        
+
         function checkPin() {
             const correctPin = "1234";
             const enteredPin = document.getElementById("pinInput").value;
