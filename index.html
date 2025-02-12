@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <title></title>
+</head>
+<body>
+    <!-- Login Page -->
+    <div class="login-container" id="loginPage">
+        <div class="login-box">
+            <h2>Enter PIN</h2>
+            <input type="password" id="pinInput" maxlength="4" placeholder="****">
+            <button class="login-btn" onclick="checkPin()">Unlock</button>
+        </div>
+    </div>
+
+    <!-- Page 1: Greeting -->
+    <div class="page active" id="page1" style="margin-top: 20em;">
+        <h1>Hey Beautiful!</h1>
+        <p>I have something special for you...</p>
+        <button class="next-btn" onclick="showPage('page2')">▼</button>
+    </div>
+
+    <!-- Page 2: Cards -->
+    <div class="page" id="page2">
+        <div class="card-container">
+            <div class="card" style="background-image: url('Assets/images/j.jpg')" onclick="moveCard(this, 'left')"></div>
+            <div class="card" style="background-image: url('Assets/images/WhatsApp\ Image\ 2024-08-13\ at\ 23.10.14_05b352e8.jpg')" onclick="moveCard(this, 'right')"></div>
+            <div class="card" style="background-image: url('Assets/images/WhatsApp\ Image\ 2024-12-08\ at\ 14.02.54_8d77ec8d.jpg')" onclick="moveCard(this, 'left')"></div>
+            <div class="card" style="background-image: url('Assets/images/WhatsApp\ Image\ 2024-12-08\ at\ 14.04.50_ee3ede10.jpg')" onclick="moveCard(this, 'left')"></div>
+            <div class="card" style="background-image: url('Assets/images/WhatsApp\ Image\ 2025-02-11\ at\ 22.03.05_cbd2b0ae.jpg')" onclick="moveCard(this, 'left')"></div> 
+        </div>
+        <button class="next-btn" onclick="showPage('page3')">▼</button>
+    </div>
+
+    <!-- Page 3: Book -->
+    <div class="page" id="page3">
+        <div class="book" onclick="openBook()">
+            <div class="book-inner">
+                <div class="page-left">
+                    <p>Forever and always, I cherish you.</p>
+                </div>
+                <div class="page-right">
+                    <p>My Dearest [Her Name],<br>
+                        Every moment with you feels like a page from a fairy tale.<br>
+                        You make my world brighter and my heart fuller.<br>
+                        Happy Valentine's Day! <br>
+                        - [Your Name]</p>
+                </div>
+                <div class="cover">Click to Open</div>
+            </div>
+        </div>
+        <button class="next-btn" onclick="showPage('page4')">▼</button>
+    </div>
+
+    <script src="Assets/js/index.js"></script>
+</body>
+</html>
