@@ -37,7 +37,7 @@ let currentCardIndex = 0;
         
 
         function checkPin() {
-            const correctPin = "1234";
+            const correctPin = "0212";
             const enteredPin = document.getElementById("pinInput").value;
             if (enteredPin === correctPin) {
                 document.getElementById("loginPage").style.display = "none";
